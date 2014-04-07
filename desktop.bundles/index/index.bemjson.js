@@ -1,9 +1,10 @@
 ({
     block: 'page',
+    mods:{'js_inited':true},
     title: 'Title of the page',
     favicon: '/favicon.ico',
     head: [
-        { elem: 'meta', attrs: { name: 'description', content: '' }}
+        { elem: 'meta', attrs: { name: 'description', content: '' }},
     ],
     styles: [
         { elem: 'css', url: 'reset.css'},
@@ -12,7 +13,11 @@
         { elem: 'css', url: '_index.ie.css', ie: 'IE' }
     ],
     scripts: [
-        { elem: 'js', url: '_index.js' }
+        { elem: 'js', url: '_index.js' },
+        { elem: 'js', url: '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js' },
+        // от этого нужно избавляться
+        { elem: 'js', url: 'application.js' }
+
     ],
     content: [
         {
@@ -53,7 +58,6 @@
                                     block: 'checkbox',
                                     type: 'checkbox',
                                     cls: 'main-checkbox',
-                                    js: true,
                                     mods: {'top-5px':true}
                                 },
 
