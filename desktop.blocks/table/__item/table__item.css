@@ -1,0 +1,21 @@
+.table__item
+{   border-top: none!important;
+    border-bottom: 1px solid rgb(188,188,188)!important;
+}
+
+.table__item th,
+.table__item td{
+    border-top:0;
+}
+
+.table__item td:last-child span:after{
+    content: ","
+}
+.table__item td:last-child span:last-child:after{
+    content: ""
+}
+
+.table__item th {
+    color: rgb(159,152,146);
+    font-weight: normal;
+}

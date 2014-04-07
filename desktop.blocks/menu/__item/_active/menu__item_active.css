@@ -1,0 +1,10 @@
+.menu__item_active
+{
+}
+
+.menu__item_active a
+{
+	color: rgb(0,0,0);
+	font-size: 16px;
+	text-decoration: none;
+}

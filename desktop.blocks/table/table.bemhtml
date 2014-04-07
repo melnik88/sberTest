@@ -1,0 +1,74 @@
+block('table')(
+    content()(function() {
+        return this.ctx.people.map(function(item, index){
+            if (index==0)
+                return [
+                    {
+                        elem: 'item',
+                        content: [
+                            {
+                                tag: 'th',
+                                content: [""]
+                            },
+                            {
+                                tag: 'th',
+                                content: item.name
+                            },
+                            {
+                                tag: 'th',
+                                content: item.email
+                            },
+                            {
+                                tag: 'th',
+                                content: item.tel
+                            },
+                            {
+                                tag: 'th',
+                                content: item.groups
+                            }
+                        ]
+                    }
+                ]
+            else
+                return [
+                    {
+                        elem: 'item',
+                        content: [
+                            {
+                                tag: 'td',
+                                content: [{
+                                     block: 'checkbox',
+                                     type: 'checkbox'
+                                }]
+                            },
+                            {
+                                tag: 'td',
+                                content: item.name
+                            },
+                            {
+                                tag: 'td',
+                                content: item.email
+                            },
+                            {
+                                tag: 'td',
+                                content: item.tel
+                            },
+                            {
+                                tag: 'td',
+                                content: [
+                                    item.groups.map(function(item){
+                                    return[ {tag: 'span', content: [item.name]}, ' ' ]
+                                    })
+                                ]
+                            }
+                        ]
+                    }
+                ];
+ 
+        });
+    }),
+ 	tag()('table'),
+    elem('item')(tag()('tr'))
+
+
+)

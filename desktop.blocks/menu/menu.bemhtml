@@ -1,0 +1,31 @@
+block('menu')(
+ 
+ 	tag()('ul'),
+
+    content()(function() {
+        return this.ctx.menu.map(function(item){
+            return [
+                {
+                    elem: 'item',
+                    content: [
+                        {
+                        	tag: 'a', 
+                        	content: item.title, 
+                        	attrs: {href:item.url}
+                        }
+                    ],
+                    mods: {active: item.active}
+                },
+                ' '
+            ];
+ 
+        });
+ 
+    }),
+  
+    elem('item')(
+        tag()('li')
+    )
+ 
+
+)
