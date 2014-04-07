@@ -12,7 +12,8 @@ http://nodejs.org/
 3. ›`npm install bem`
 4. ›`./node_modules/bem/bin/bem server`
 
-После установки приложение будет доступно по адресу: http://localhost:8080/desktop.bundles/index/index.html
+После установки приложение будет доступно по адресу: 
+http://localhost:8080/desktop.bundles/index/index.html
 
 ### Первые впечатления
 
